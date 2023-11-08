@@ -1,0 +1,8 @@
+Flask
+flask-marshmallow
+Flask-SQLAlchemy
+gunicorn
+marshmallow
+marshmallow-sqlalchemy
+psycopg2
+SQLAlchemy
