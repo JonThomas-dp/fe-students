@@ -58,7 +58,7 @@ def crud_user():
         db.session.add(new_user)
         db.session.commit()
 
-        return jsonify({"message": f"user {values['name']} created"}), 200
+        return jsonify({"message": f"user {values['name']} created", "results": user_schema.dump(new_user)}), 200
 
     elif request.method == "DELETE":
         data = request.form if request.form else request.json
