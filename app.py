@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import psycopg2
+from flask_cors import CORS
 from sqlalchemy import delete
 import os
 
@@ -19,6 +20,7 @@ database_name = os.environ.get("DATABASE_NAME")
 database_password = os.environ.get("DATABASE_PASSWORD")
 
 app = Flask(__name__)
+CORS(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = f"{database_scheme}{database_user}:{database_password}@{database_address}:{database_port}/{database_name}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
