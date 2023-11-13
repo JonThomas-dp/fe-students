@@ -1,6 +1,7 @@
 Flask
 flask-marshmallow
 Flask-SQLAlchemy
+flask-cors
 gunicorn
 marshmallow
 marshmallow-sqlalchemy
